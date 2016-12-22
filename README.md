@@ -1,2 +1,3 @@
 # ops_shell
- Scripts for daily operation and maintenance
+ Scripts for daily operation and maintenance~
+ GO！
