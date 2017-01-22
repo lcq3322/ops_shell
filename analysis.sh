@@ -46,7 +46,26 @@ sed -i 's/ServerActive=127.0.0.1/ServerActive=10.10.76.133/g' /etc/zabbix/zabbix
 systemctl start  zabbix-agent.service
 systemctl enable  zabbix-agent.service
 
- 
+ #!/bin/bash
+
+#olddata:990147789
+
+#newdata:990148308
+
+
+#if [ $# != 1 ] ; then
+#    echo "1|parameters error! Usage: $0  funcc" 
+#    exit 1;
+#fi
+
+#ddd=`mysql -umonitor -pmonitor@allen -h127.0.0.1 -P3306 -s -e "select VARIABLE_VALUE from INFORMATION_SCHEMA.GLOBAL_STATUS where VARIABLE_NAME='COM_SELECT';" | tail -1`
+#ooo=`cat /data/scripts/mtj.sh | grep "^#newdata" | awk -F ":"  '{print $2}'`
+#sed -i   "3s/#olddata:.*/#olddata:$ooo/"      /data/scripts/mtj.sh
+#sed -i   "5s/#newdata:.*/#newdata:$ddd/"      /data/scripts/mtj.sh
+#function comselect3306    {
+#             echo $ddd-$ooo | bc
+#                      }
+#$1
  
  
  
