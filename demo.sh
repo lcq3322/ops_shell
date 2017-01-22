@@ -2,8 +2,7 @@
 
 #brife 脚本工具编写模板
 #changeLog
-# 2015.12.09 创建 by willas
-
+# 2013.05.08 创建 by lcq
 #参数: num1 num2
 #返回值：通过echo 字符串形式返回
 # 格式： retcode|retmsg
