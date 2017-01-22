@@ -96,3 +96,13 @@ mail -a /data/scripts/files/$uuu/ttofficevpn.tar.gz -s VPN权限开通 $uuu@ttyo
 fi
 
 
+#1. 安装openvpn图形界面和openvpn程序
+#   根据操作系统版本，下载其中之一的安装文件(来自https://openvpn.net/index.php/open-source/downloads.html)并安装:
+#   32位操作系统 http://openvpn.ustc.edu.cn/openvpn-install-2.3.6-I003-i686.exe
+#   64位操作系统 http://openvpn.ustc.edu.cn/openvpn-install-2.3.6-I003-x86_64.exe
+#   安装TAP驱动的时候有个没有经过数字签名的警告,选择允许安装。
+   
+#2. 把邮件附件中的openvpn配置文件ttofficevpn.tar.gz下载到机器临时目录，并解压出4个文件，将这4个文件拷贝到到openvpn安装目录config下面,一般是
+#   C:\program files\openvpn\config，也可能是C:\Program Files (x86)\OpenVPN\config
+
+#3. 到openvpn的安装目录bin下(默认是C:\program files\openvpn\bin)，找到openvpn-gui.exe, 在这个openvpn-gui.exe文件上单击鼠标右键,选择"以管理员身份运行"(英语是Run as Administrator)
