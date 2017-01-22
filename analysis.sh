@@ -34,7 +34,18 @@ $1
  
  
  
- 
+ #!/bin/bash
+cd /root/
+wget 10.10.161.60:17826/files/zabbix-release-2.2-1.el7.noarch.rpm
+cd /root/
+rpm -ivh zabbix-release-2.2-1.el7.noarch.rpm
+yum install -y  zabbix.x86_64  zabbix-agent.x86_64
+sleep 3
+sed -i 's/Server=127.0.0.1/Server=10.10.76.133/g' /etc/zabbix/zabbix_agentd.conf 
+sed -i 's/ServerActive=127.0.0.1/ServerActive=10.10.76.133/g' /etc/zabbix/zabbix_agentd.conf 
+systemctl start  zabbix-agent.service
+systemctl enable  zabbix-agent.service
+
  
  
  
