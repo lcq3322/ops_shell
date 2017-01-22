@@ -17,3 +17,13 @@ if [ $unum -ge 10 ]; then
         curl -d "from=monlog" -d "mobiles=${i}" -d"content=${content}" -d"timestamp=${ddd}" -d "rand=${rrr}${rrr}" -d "sign=${sign}" -s "http://10.10.135.97:12800/sms/send" 
     done 
 fi
+
+
+#!/bin/bash
+
+#nlog=/data/logs/nginx/api/access_log
+#tail -10000 $nlog | grep -v 200 | grep -v baidu  > /tmp/t.log
+#unum=`cat /tmp/t.log | wc -l`
+#ufze=`cat /rmp/t.log | grep 502 | wc -l`
+
+
