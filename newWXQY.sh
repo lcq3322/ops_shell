@@ -1,4 +1,3 @@
-[root@ops scripts ]$ cat o.sh 
 #!/bin/bash
 
 #报警信息:  AgentId  1
