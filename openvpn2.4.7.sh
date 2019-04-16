@@ -1,7 +1,7 @@
 #iip=`ip add | grep 'inet 192.168.242.128'`
 
 #if [ ! $iip ] ; then
-#   echo "1|环境错误! 请在OfficVpn.Sto运行"
+#   echo "1|环境错误! 请在OfficVpn.xxx运行"
 #   exit 1;
 #fi
 #yum install -y expect
@@ -24,14 +24,14 @@ cp /etc/openvpn/easy-rsa/pki/ca.crt               /data/scripts/files/$uuu
 cp /etc/openvpn/easy-rsa/pki/issued/$uuu.crt      /data/scripts/files/$uuu
 cp /etc/openvpn/easy-rsa/pki/private/$uuu.key     /data/scripts/files/$uuu
 sleep 1
-cp /data/scripts/files/ddd.ovpn    /data/scripts/files/$uuu/stovpn.ovpn
-sed -i "s/ddd.crt/$uuu.crt/g"  /data/scripts/files/$uuu/stovpn.ovpn
-sed -i "s/ddd.key/$uuu.key/g"  /data/scripts/files/$uuu/stovpn.ovpn
+cp /data/scripts/files/ddd.ovpn    /data/scripts/files/$uuu/xxx.ovpn
+sed -i "s/ddd.crt/$uuu.crt/g"  /data/scripts/files/$uuu/xxxvpn.ovpn
+sed -i "s/ddd.key/$uuu.key/g"  /data/scripts/files/$uuu/xxxvpn.ovpn
 sleep 1
 cd /data/scripts/files/
-tar zcf  stovpn.tar.gz  $uuu  openvpn-install-2.4.7-I601.exe  && mv stovpn.tar.gz  $uuu
+tar zcf  xxxvpn.tar.gz  $uuu  openvpn-install-2.4.7-I601.exe  && mv xxxvpn.tar.gz  $uuu
 sleep 2
-#mail -a /data/scripts/files/$uuu/stovpn.tar.gz -s VPN权限开通 $uuu@sto.cn < /data/scripts/files/content.txt  && echo "0|jobs done!!!"
+#mail -a /data/scripts/files/$uuu/xxxvpn.tar.gz -s VPN权限开通 $uuu@xxx.cn < /data/scripts/files/content.txt  && echo "0|jobs done!!!"
 }
 sendmail
   else
@@ -42,7 +42,7 @@ cd /etc/openvpn/easy-rsa
 #spawn sh build-key $uuu
 spawn sh easyrsa build-client-full $uuu  nopass
 expect "Enter pass phrase for /etc/openvpn/easy-rsa/pki/private/ca.key:"
-send "sto.ovpn\n"
+send "PASSWORD!!!\n"
 expect EOF
 EOF
 sendmail
