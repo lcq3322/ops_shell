@@ -43,7 +43,7 @@ sleep 1
 cd /data/scripts/files/
 tar zcf  xxxvpn.tar.gz  $uuu  openvpn-install-2.4.7-I601.exe  && mv xxxvpn.tar.gz  $uuu
 sleep 2
-#mail -a /data/scripts/files/$uuu/xxxvpn.tar.gz -s VPN权限开通 $uuu@xxx.cn < /data/scripts/files/content.txt  && echo "0|jobs done!!!"
+mail -a /data/scripts/files/$uuu/xxxvpn.tar.gz -s VPN权限开通 $uuu@xxx.cn < /data/scripts/files/content.txt  && echo "0|jobs done!!!"
 }
 
 if [ ! $uuu ];then
