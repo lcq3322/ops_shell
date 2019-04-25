@@ -6,7 +6,7 @@ for logfile in ${Log_files[@]}
 do
         mv $logfile ${logfile}-${logdate}
         echo  ${logfile}-${logdate}
-#        bzip2 -9 ${logfile}-${logdate}
+        bzip2 -9 ${logfile}-${logdate} &
 done
 #/usr/sbin/nginx  -s  reload
 #find /data/logs/nginx -type f -mtime +60 |grep -E '\.bz2$'|xargs rm -f
