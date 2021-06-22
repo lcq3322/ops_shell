@@ -61,8 +61,7 @@ cd /etc/openvpn/easy-rsa
 #spawn sh build-key $uuu 
 spawn ./easyrsa build-client-full $uuu  nopass
 expect "/etc/openvpn/easy-rsa/pki/private/ca.key:"
-send "PASSWD"   ### ca pass
-send "\n"
+send "PASSWD\n"   ### ca pass
 expect EOF
 EOF
 sendmail
